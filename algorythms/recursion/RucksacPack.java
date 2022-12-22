@@ -1,4 +1,5 @@
-package algorythms.recursion;
+// not working
+package algorythms.recursion;  //todo
 public class RucksacPack {
     public static void main(String[] args) {
 
