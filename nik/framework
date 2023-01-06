@@ -1,0 +1,14 @@
+/*
+*  1. Array class with Strategy pattern
+*  2. Realize Clonable pattern
+*  3. Realize Equal method to compare arrays separate Objects
+*  4. Assertion unit tests for every lesson
+*  5. branches to colaborate
+*
+* */
+
+  app
+     array
+         strategy
+     print
+  ArrayTest
