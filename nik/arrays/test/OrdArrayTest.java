@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OrdArrayTest {
-    OrdArray array = new OrdArray(6);
+    OrdArray array = new OrdArray(6, new BubbleSortStrategy());
     int[] tmp = array.getArray();
 
     @Test

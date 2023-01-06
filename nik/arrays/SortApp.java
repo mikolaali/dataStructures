@@ -1,5 +1,6 @@
 package nik.arrays;
 
+import nik.arrays.strategy.BubbleSortStrategy;
 import nik.arrays.strategy.SelectSortStrategy;
 
 import java.util.Arrays;
@@ -12,7 +13,7 @@ public class SortApp {
      */
     public static void main(String[] args) {
         System.out.println("===============  Ord Array like in book variant =============");
-        OrdArray ordBubbleSorted = new OrdArray(25);
+        OrdArray ordBubbleSorted = new OrdArray(25, new BubbleSortStrategy());
         OrdArray ordSelectSorted = (OrdArray) ordBubbleSorted.clone();
         // SORT arrays with diff stategy -----------------------------------------
         ordSelectSorted.setSortStrategy(new SelectSortStrategy());
@@ -24,7 +25,7 @@ public class SortApp {
         System.out.println("SELECT sorted ARRAY 1:");
         ordSelectSorted.display();
         // COMPARE 2 ARRAYS
-        OrdArray array = new OrdArray(5);
+        OrdArray array = new OrdArray(5, new BubbleSortStrategy());
         int[] tmp = array.getArray();
         if (array.getArray() == tmp) {
             System.out.println("Equal");
