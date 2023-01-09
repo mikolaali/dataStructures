@@ -1,6 +1,5 @@
 package nik.arrays;
 
-import nik.arrays.strategy.BubbleSortStrategy;
 import nik.arrays.strategy.SortStrategy;
 
 import java.util.Arrays;
@@ -13,16 +12,13 @@ import java.util.Random;
 public class OrdArray implements Clonable {
     private int size;
     private int[] array;
-    private SortStrategy sortStrategy = new BubbleSortStrategy();
+    private SortStrategy sortStrategy;
 
-    public OrdArray(int max) {
+    public OrdArray(int max, SortStrategy sortStrategy) {
+        this.sortStrategy = sortStrategy;
         size = 0;
         array = new int[max];
-        Random rand = new Random();
-        for (int i = 0; i < max - 1; i++) {
-            array[i] = rand.nextInt(100);
-            size++;
-        }
+        init();
         sort();
     }
 
@@ -30,6 +26,15 @@ public class OrdArray implements Clonable {
         this.size = array.size();
         this.array = array.getArray();
         this.sortStrategy = array.getSortStrategy();
+    }
+
+    public void init(){
+        size = 0;
+        Random rand = new Random();
+        for (int i = 0; i < array.length - 1; i++) {
+            array[i] = rand.nextInt(100);
+            size++;
+        }
     }
 
     public int[] getArray() {
