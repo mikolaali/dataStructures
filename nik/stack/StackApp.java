@@ -9,7 +9,8 @@ public class StackApp {
     public static void main(String[] args) throws IOException {
 
         /* 1. Заполнение стэка и вывод его содержимого   */
-        Stack<Integer> stack = new Stack(Integer.class, 10);
+//        Stack<Integer> stack = new Stack(Integer.class, 10);
+        Stack<Integer> stack = new Stack(10);
         Random rnd = new Random();
         for (int i = 0; i < 10; i++) {
             stack.push(rnd.nextInt(99));
@@ -23,7 +24,8 @@ public class StackApp {
         /* 2. Делаем реверс строки */
 //        String str = getString();
         String str = "asdfgh";
-        Stack<Character> stk = new Stack(Character.class, str.length());
+//        Stack<Character> stk = new Stack(Character.class, str.length());
+        Stack<Character> stk = new Stack(str.length());
         for (int i = 0; i < str.length(); i++) {
             stk.push(str.charAt(i));
         }
@@ -63,7 +65,8 @@ public class StackApp {
             System.out.println("Enter some string");
             return false;
         }
-        Stack<Character> stack = new Stack<>(Character.class, str.length());
+//        Stack<Character> stack = new Stack<>(Character.class, str.length());
+        Stack<Character> stack = new Stack<>(str.length());
         for (int i = 0; i < str.length(); i++) {
             Character ch = str.charAt(i);
             switch (ch){

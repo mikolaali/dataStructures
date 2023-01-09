@@ -1,12 +1,12 @@
 package nik.stack;
 
-import java.lang.reflect.Array;
-
 public class Stack<T> {
     private T[] stack;
     private int top;
-    public Stack(Class<T> clazz,int max){
-        stack = (T[]) Array.newInstance(clazz, max);
+//    public Stack(Class<T> clazz,int max){
+    public Stack(int max){
+        //stack = (T[]) Array.newInstance(clazz, max);
+        stack = (T[]) new Object[max];
         top = -1;
     }
     public void push(T val){
