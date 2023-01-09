@@ -1,5 +1,10 @@
 package nik.arrays.strategy;
 
+/**
+ * The type Insert sort strategy.
+ * Из всех видов сортировки со сложностью O(N 2), описанных в этой главе,
+ * чаще всего используется сортировка методом вставки.
+ */
 public class InsertSortStrategy implements SortStrategy{
     @Override
     public int[] sort(int[] array, int size) {
