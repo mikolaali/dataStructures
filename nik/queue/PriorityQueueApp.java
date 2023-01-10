@@ -6,7 +6,7 @@ public class PriorityQueueApp {
         queue.init(10);
         queue.insert(13);
         while(!queue.isEmpty()) {
-            System.out.print(queue.remove() + " --- ");
+            System.out.print(queue.remove2() + " --- ");
         }
     }
 }
