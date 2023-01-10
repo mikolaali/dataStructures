@@ -7,12 +7,13 @@ public class QueueApp {
     Random rnd = new Random();
     Queue<Integer> queue = new Queue(10);
     int val;
-    for (int i = 0; i < 11; i++) {
+    for (int i = 0; i < 10; i++) {
         val =  rnd.nextInt(100);
         System.out.print( val + " --- ");
         queue.insert(val);
     }
-    System.out.println("");
+
+    System.out.println("" + queue.size());
     while (!queue.isEmpty()){
         System.out.print(queue.remove() + " === ");
     }
