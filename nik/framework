@@ -12,3 +12,11 @@
          strategy
      print
   ArrayTest
+
+stack/Stack на основе массива
+queue/Queue в основе массив
+queue/Deque в основе очычный массив
+queue/PriorityQueue  тупо через упорядоченный массив
+
+155page: stack/Interpretator.class арифметического выражения
+перевод инфиксной в постфиксную форму.

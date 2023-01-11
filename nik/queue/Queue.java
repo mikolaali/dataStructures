@@ -21,8 +21,12 @@ public class Queue<T> {
     public T remove(){
         if(isEmpty()) throw new IndexOutOfBoundsException("Queue is EMPTY");
 
-        T tmp = queue[front];
-        if(front == queue.length - 1) {front = 0; return tmp;}
+        T tmp = queue[front++];
+        if(front == queue.length ) {
+            front = 0;
+            amount--;
+            return tmp;
+        }
         front++;
         amount--;
         return tmp;
