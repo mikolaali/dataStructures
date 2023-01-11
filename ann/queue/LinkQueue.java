@@ -1,4 +1,4 @@
-package data_structures.queue;
+package ann.queue;
 class LinkQApp {
     public static void main(String[] args) {
         LinkQueue queue= new LinkQueue();

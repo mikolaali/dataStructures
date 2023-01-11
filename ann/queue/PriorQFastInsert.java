@@ -1,13 +1,13 @@
-package data_structures.queue;
-class PriorQApp {
+package ann.queue;
+class PriorQFastInsertApp {
     public static void main(String[] args) {
-        PriorityQ queue= new PriorityQ(6);
+        PriorQFastInsert queue= new PriorQFastInsert(6);
         queue.insert(1);
         queue.insert(22);
         queue.insert(5);
         queue.insert(8);
         System.out.println("reading front: "+queue.read());
-        System.out.println("getting prior elem: "+queue.pop());
+        System.out.println("getting prior: "+queue.pop());
         //System.out.println("sorted by insert sorting array: ");
         System.out.println("reading front: "+queue.read());
 
@@ -15,34 +15,31 @@ class PriorQApp {
 }
 
 
-
-public class PriorityQ {
+public class PriorQFastInsert {
     private long[] priorQ;
     private int size;
     int amount;
 
-    public PriorityQ(int s) {
+    public PriorQFastInsert(int s) {
         priorQ = new long[s];
         size = s;
         amount = 0;
     }
 
     public void insert(long l) {
-        int i;
-        if (amount == 0) {priorQ[0] = l;}
-        else {
-            for (i=amount-1; i>=0; i--) {
-                if (l>priorQ[i]) {priorQ[i+1] = priorQ[i];}
-                else break;
-            }
-            priorQ[i+1] = l;
-        }
-        amount++;
+        priorQ[amount++] = l;
     }
 
     public long pop() {
-        return  priorQ[--amount];
+        long t = priorQ[0];
+        int ind = 0;
+        for (int i=1;i<amount;i++) {
+            if (priorQ[i]<t) {t = priorQ[i]; ind=i;}
         }
+        for (int k=ind;k<amount;k++) {priorQ[k]=priorQ[k+1];}
+        amount--;
+        return t;
+    }
 
     public long read() {
         return priorQ[amount-1];
@@ -53,7 +50,6 @@ public class PriorityQ {
     public boolean isEmpty() {
         return amount==0;
     }
-
 
 
 }

@@ -1,7 +1,7 @@
-package data_structures.queue;
+package ann.queue;
 class Main {
     public static void main(String[] args) {
-        Queue queue= new Queue(4);
+        QueueCycl queue= new QueueCycl(4);
         queue.insert(1);
         queue.insert(22);
         queue.insert(5);
@@ -19,13 +19,13 @@ class Main {
 
 
 
-class Queue {               //Цикличная очередь
+class QueueCycl {               //Цикличная очередь
     int size;
     long[] queue;
     int ElsAmount;
     int front;
     int rear;
-    public Queue(int q) {
+    public QueueCycl(int q) {
         size = q;
         queue = new long[q];
         ElsAmount = 0;
@@ -60,7 +60,7 @@ class Queue {               //Цикличная очередь
 
     public void display() {
         if (ElsAmount == 0) {
-            System.out.println("its empty");
+            System.out.println("dat shit is empty");
         }
         else if (front==rear) {
             System.out.println(queue[front]);
