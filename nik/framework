@@ -20,3 +20,5 @@ queue/PriorityQueue  тупо через упорядоченный массив
 
 155page: stack/Interpretator.class арифметического выражения
 перевод инфиксной в постфиксную форму.
+
+185page: list/
