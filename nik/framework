@@ -22,3 +22,5 @@ queue/PriorityQueue  тупо через упорядоченный массив
 перевод инфиксной в постфиксную форму.
 
 185page: list/
+200page: list/ firstLast - двусторонний
+201page: ADT stack based on NodeList
