@@ -1,8 +1,8 @@
 package nik.list.firstlast;
 
 public class NodeL {
-    private long iData;
-    private NodeL next;
+    public long iData;
+    public NodeL next;
     public NodeL(long obj){
         iData = obj;
     }
