@@ -91,7 +91,7 @@ public class DoublyLinkedList {
         return current;
     }
 
-    void displayForward(){
+    public void displayForward(){
         Node current = first;
         while (current != null){
             current.display();
@@ -99,7 +99,7 @@ public class DoublyLinkedList {
         }
     }
 
-    void displayBackward(){
+    public void displayBackward(){
         Node current = last;
         while (current != null){
             current.display();

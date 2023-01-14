@@ -24,3 +24,4 @@ queue/PriorityQueue  тупо через упорядоченный массив
 185page: list/
 200page: list/ firstLast - двусторонний
 201page: ADT stack based on NodeList
+240: итератоор для списка , скопировал , сам не проделал. ПЛОХО

@@ -69,14 +69,33 @@ public class IteratorForListApp {
 
             }
         }
+        iter.reset();
+        int value = iter.getCurrent().data;
+        System.out.println(value + " ");
+        while (!iter.atEnd()){
+            iter.nextNode();
+            value = iter.getCurrent().data;
+            System.out.println(value + " ");
+        }
+
+        iter.insertAfter(21);
+        iter.insertAfter(40);
+        iter.insertAfter(30);
+        iter.insertAfter(7);
+        iter.insertAfter(45);
+        list.displayList();
+
+        iter.reset();
+        if(iter.getCurrent().data % 3 == 0) // get current
+            iter.deleteCurrent();
+        while (!iter.atEnd()){  // while for current+1
+            iter.nextNode();
+            if(iter.getCurrent().data % 3 == 0)
+                iter.deleteCurrent();
+        }
+        list.displayList();
     }
 
-    public static String getString() throws IOException {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        String s = br.readLine();
-        return s;
-    }
     private static int getInt() throws IOException {
         String s = getString();
         return Integer.parseInt(s);
@@ -85,5 +104,11 @@ public class IteratorForListApp {
     private static char getChar() throws IOException {
         String s = getString();
         return s.charAt(0);
+    }
+    public static String getString() throws IOException {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        String s = br.readLine();
+        return s;
     }
 }

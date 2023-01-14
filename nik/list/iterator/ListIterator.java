@@ -52,15 +52,15 @@ public class ListIterator {
     public int deleteCurrent(){
         int val = current.data;
         if(previous == null ){
-            current = current.next;
-            return val;
+            list.setFirst(current.next);
+            reset();
         } else {
             previous.next = current.next;
             if(atEnd()) reset();
             else
                 current = current.next;
-            return val;
         }
+        return val;
     }
 
 
