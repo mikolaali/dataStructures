@@ -22,10 +22,9 @@ public class Queue<T> {
 
     public T pop() {
         if(isEmpty()) throw new IndexOutOfBoundsException("Queue is EMPTY");
-        T t = Q[front];
+        T t = Q[front++];
+        if(front == Q.length) {front = 0;}
         amount--;
-        if(front == Q.length - 1) {front = 0; return t;}
-        front++;
         return t;
     }
 
@@ -35,4 +34,28 @@ public class Queue<T> {
 
     public int size() {return amount;}
 
+    //нужен метод??
+    public void display() {
+        if (amount == 0) {
+            System.out.println("dat shit is empty");
+        }
+        else if (front==rear) {
+            System.out.println(Q[front]);
+        }
+        else if (front > rear) {    //Для цикличного
+            for (int i=front;i<amount;i++) {
+                System.out.println(Q[i]);
+            }
+            for (int k=0;k<front;k++) {
+                System.out.println(Q[k]);
+            }
+        }
+        else {int t = front; for (int i=front;i<amount+t;i++) {
+            System.out.println(Q[i]);
+        }}
+    }
+//??
+    public T read() {
+        return Q[front];
+    }
 }
