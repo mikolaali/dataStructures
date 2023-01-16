@@ -26,5 +26,14 @@ public class Stack<T> {
     public boolean isFull(){
         return ( top == stack.length - 1);
     }
-
+    public void displayStack(){
+        if(isEmpty()) {
+            System.out.println("");
+            return;
+        }
+        for (int i = 0; i <= top ; i++) {
+            System.out.print(stack[i] + " ");
+        }
+        System.out.println("");
+    }
 }

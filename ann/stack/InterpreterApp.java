@@ -1,7 +1,7 @@
 package ann.stack;
 
 
-public class InterpreterApp {public static void main(String[] args) {
+public class InterpreterApp { public static void main(String[] args) {
     // буквенное выражение
     Interpreter intp = new Interpreter(
             "aa -(bb+c*d*e+f)/(g-h+i*k)+(l+m+n/q)*s+t");

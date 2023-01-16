@@ -31,7 +31,7 @@ public class OrdArray implements Clonable {
     public void init(){
         size = 0;
         Random rand = new Random();
-        for (int i = 0; i < array.length - 1; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = rand.nextInt(100);
             size++;
         }
