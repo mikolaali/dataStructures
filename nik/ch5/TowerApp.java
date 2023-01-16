@@ -1,4 +1,4 @@
-package nik.ch5.triangle;
+package nik.ch5;
 
 import nik.stack.Stack;
 

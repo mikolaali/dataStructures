@@ -1,4 +1,4 @@
-package nik.ch5.triangle;
+package nik.ch5;
 
 public class OrderedArrayRecursion {
     private int amount;

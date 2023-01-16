@@ -1,4 +1,6 @@
-package nik.ch5.triangle;
+package nik.ch5;
+
+import nik.ch5.OrderedArrayRecursion;
 
 public class OrderedArrayRecursionApp {
     public static void main(String[] args) {
