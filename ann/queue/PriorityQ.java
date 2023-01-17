@@ -1,4 +1,7 @@
 package ann.queue;
+//Суть: при вставке упорядочиваем, но берем всегда с начала (или конца)
+
+
 class PriorQApp {
     public static void main(String[] args) {
         PriorityQ queue= new PriorityQ(6);
@@ -7,9 +10,9 @@ class PriorQApp {
         queue.insert(5);
         queue.insert(8);
         System.out.println("reading front: "+queue.read());
-        System.out.println("getting prior elem: "+queue.pop());
+        System.out.println("getting prior (smallest) elem: "+queue.pop());
         //System.out.println("sorted by insert sorting array: ");
-        System.out.println("reading front: "+queue.read());
+        System.out.println("reading smallest after popping: "+queue.read());
 
     }
 }
@@ -42,7 +45,7 @@ public class PriorityQ {
 
     public long pop() {
         return  priorQ[--amount];
-        }
+        }  //берём с конца
 
     public long read() {
         return priorQ[amount-1];
