@@ -50,6 +50,27 @@ public class OrdArray implements Clonable {
      */
     public void sort(){ array = sortStrategy.sort(array, size);}
 
+    public  void shellSort() {
+        int i, indexToSort;
+        int elemToSort;
+        int h = 1;
+        while (h * 3 < size)
+            h = h * 3 + 1;
+        while (h > 0) {
+            for (indexToSort = h; indexToSort < size; indexToSort++) {
+                elemToSort = array[indexToSort];
+                i = indexToSort;
+                // Первый подмассив (0, 4, 8)
+                while (i >= h && array[i - h] >= elemToSort) {
+                    array[i] = array[i - h];
+                    i -= h;
+                }
+                array[i] = elemToSort;
+            }
+            h = (h - 1) / 3;
+        }
+    }
+
     /**
      *Binary search
      */

@@ -5,7 +5,7 @@ public class ShellSortStrategy implements SortStrategy{
     public int[] sort(int[] array, int size) {
         int h = 1;
         while (3 * h < size)
-            h = 3 + h + 1;
+            h = 3 * h + 1;
         while (h >= 1){
             shellSort(array, h);
             h /= 3;
@@ -20,7 +20,6 @@ public class ShellSortStrategy implements SortStrategy{
                     swap(arr, j, j - h );
                 else break;
             }
-
         }
     }
     private void swap(int[] array, int left, int right){
