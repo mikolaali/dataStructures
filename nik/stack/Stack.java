@@ -36,4 +36,8 @@ public class Stack<T> {
         }
         System.out.println("");
     }
+
+    public int size() {
+        return top;
+    }
 }
